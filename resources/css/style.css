@@ -1,0 +1,244 @@
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(241, 242, 235, 1);
+    color: rgba(25, 23, 22, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+header { 
+    display: flex;
+    align-items: flex-start;
+    width: 100vw;
+    height: 7vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(25, 23, 22, 1);
+    color: rgba(224, 226, 219, 1);
+}
+
+header #logo {
+    width: 68vw;
+    height: 5vh;
+    padding: 1vh 1vw;
+    font-size: 2.5vh;
+    line-height: 5vh;
+}
+
+header #logo::before {
+    font-family: 'time-tracker-icons';
+    color: rgba(230, 175, 46, 1);
+    content: "\E800";
+}
+
+header #current-task {
+    display: flex;
+    width: 30vw;
+}
+
+header #current-task .task-info {
+    width: 20vw;
+    height: 5vh;
+    padding: 1vh 1vw;
+}
+
+header #current-task .task-description {
+    display: block;
+    text-align: right;
+    font-size: 2vh;
+}
+
+header #current-task .task-current-time {
+    display: block;
+    text-align: right;
+    font-size: 1.5vh;
+}
+
+header #current-task .task-current-time::before {
+    content: "läuft seit ";
+    color: rgba(224, 226, 219, 1);
+    font-size: 1.25vh;
+}
+
+header #current-task .task-current-time::after {
+    content: " Minuten";
+    color: rgba(224, 226, 219, 1);
+    font-size: 1.25vh;
+}
+
+header #current-task .task-controls {
+    height: 6vh;
+    padding: 0.5vh 0.5vh;
+    width: 10vh;
+}
+
+header #current-task .task-controls .task-control {
+    width: 4vh;
+    height: 4vh;
+    font-size: 3vh;
+    line-height: 4vh;
+}
+
+header #current-task .task-controls .task-control:hover {
+    cursor: pointer;
+    color: rgba(230, 175, 46, 1);
+}
+
+#container {
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+}
+
+
+#container #tasks {
+    margin: 1vh 0;
+    width: 90vw;
+}
+
+#container #tasks #task-search {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    margin: 2vh 0;
+}
+
+#container #tasks #task-search #search-input {
+    width: 40vw;
+    height: 3vh;
+}
+
+#container #tasks #task-search #search-results {
+    width: 48vw;
+    margin: 0 1vw;
+}
+
+#container #tasks #task-search #search-results #value{
+   color: rgba(100, 94, 157, 1);
+   font-weight: bold;
+}
+
+#container #tasks ul {
+    clear: both;
+    display: block;
+    height: 82vh;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+#container #tasks ul .task-entry {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1vh 0;
+    padding: 1vh;
+    background-color: rgba(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(245, 245, 245, 1);
+}
+
+#container #tasks ul .filter-info {
+    margin: 1.5vh 0;
+    padding: 1vh;
+    background-color: rgba(100, 94, 157, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+#container #tasks .task-entry .task-info {
+    width: 60%;
+}
+
+#container #tasks .task-entry .task-info .task-description {
+    display: block;
+    font-size: 2vh;
+}
+
+#container #tasks .task-entry .task-info .task-time {   
+    display: block;
+    margin-top: 0.5vh;
+    font-size: 1.25vh;
+}
+
+#container #tasks .task-entry .task-labels {
+    width: 40%;
+    margin-top: 1vh;
+}
+
+#container #tasks .task-entry .task-label {
+    display: block;
+    float: left;
+    margin: 0.25vh;
+    padding: 0.25vh;
+    background-color: rgba(100, 94, 157, 1);
+    border-style: solid;
+    border-radius: 0.5vh;
+    border-color: rgba(100, 94, 157, 1);
+    font-size: 1vh;
+    color: rgba(255, 255, 255, 1);
+}
+
+#new-task {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    width: 20vw;
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+}
+
+#new-task #task-form {
+    width: 20vw;
+}
+
+#new-task #task-form #label {
+    height: 3vh;
+    color: rgba(100, 94, 157, 1);
+    font-weight: bold;
+}
+
+#new-task #task-form .field {
+    width: 18vw;
+    height: 4vh;
+    margin: 1vh 0;
+}
+
+#new-task #task-form .button {
+    height: 4vh;
+    width: 8vw;
+    margin: 0.75vw;
+    text-align: center;
+}
+
+#new-task #task-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10vh;
+    height: 10vh;
+    background-color: rgba(100, 94, 157, 1);
+    border-radius: 50%;
+    line-height: 10vh;
+    text-align: center;
+    font-size: 5vh;
+    color: rgba(255, 255, 255);
+}
+
+#new-task #task-button:hover {
+    cursor: pointer;
+    color: rgba(230, 175, 46, 1);
+}

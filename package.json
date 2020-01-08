@@ -1,0 +1,23 @@
+{
+  "name": "mme-time-tracker",
+  "version": "1.0.0",
+  "description": "A simple time tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Time-Tracker.git"
+  },
+  "author": "Alexander Bazo <alexander.bazo@ur.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Time-Tracker/issues"
+  },
+  "homepage": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Time-Tracker#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

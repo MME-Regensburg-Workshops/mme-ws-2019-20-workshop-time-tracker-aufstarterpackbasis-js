@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MME-DEMO: Time Tracker</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/icons/css/time-tracker-icons.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            Time Tracker
+        </div>
+        <div id="current-task">
+            <span class="task-info hidden">
+                <span class="task-description">Übungsaufgabe bearbeiten</span>
+                <span class="task-current-time">30</span>
+            </span>
+            <span class="task-controls hidden">
+                <span class="task-control pause"><i class="icon-pause"></i></span>
+                <span class="task-control play hidden"><i class="icon-play"></i></span>
+                <span class="task-control stop"><i class="icon-stop"></i></span>
+            </span>
+        </div>
+    </header>
+    <div id="container">
+        <div id="tasks">
+            <div id="task-search">
+                <input id="search-input" type="search" placeholder="Angezeigte Aufgaben nach Labels filtern">
+                <div id="search-results" class="hidden">
+                    <span id="label">Gesamtdauer der angezeigten Aufgaben:</span>
+                    <span id="value">1 Stunde und 35 Minuten</span>
+                </div>
+            </div>
+            <ul>
+                <li class="filter-info hidden"><span class="value">23</span> weitere Tasks werden aktuell nicht angezeigt.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="new-task">
+        <div id="task-form" class="hidden">
+            <div id="label">Neue Aufgabe starten</div>
+            <input class="field task-description" type="text" placeholder="Neue Aufgabe">
+            <input class="field task-labels" type="text" placeholder="Uni, Job, Programmieren, ...">
+            <button class="button cancel" type="button">Abbrechen</button>
+            <button class="button start" type="button">Starten</button>
+        </div>
+        <div id="task-button"><i class="icon-plus"></i></div>
+    </div>
+    </header>
+    <template id="task-list-entry">
+        <li class="task-entry">
+            <span class="task-info">
+                <span class="task-description">{{description}}</span>
+                <span class="task-time">{{minutes}} Minuten am {{date}}</span>
+            </span>
+            <span class="task-labels">
+
+            </span>
+        </li>
+    </template>
+    <template id="task-label">
+        <span class="task-label">{{name}}</span>
+    </template>
+</body>
+<script type="module" src="resources/js/index.js" defer></script>
+
+</html>
